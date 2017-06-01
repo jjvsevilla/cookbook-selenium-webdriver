@@ -1,14 +1,18 @@
+require('babel-core/register');
 'use strict';
 
-export default class HelloWorld {
+import BasePage from '../lib/BasePage';
+
+export default class HelloWorld extends BasePage {
   
-  cucumber = {
-    page: '',
-    domain: ''
-  };
+  // cucumber = {
+  //   page: '',
+  //   domain: ''
+  // };
 
   constructor() {
-    this.url = `https://${cucumber.page}.${cucumber.domain}`;
+    super();
+    this.url = `http://elcomercio.pe/`;
   }
 
   openWithUrl(url) {
